@@ -29,15 +29,16 @@
       "aldente"
       "chatgpt"
       "cleanshot"
+      "docker"
       "firefox"
       "monitorcontrol"
       "obsidian"
       "raycast"
       "roon"
       "skype"
+      "visual-studio-code"
       "wezterm"
       "zen-browser"
-      "visual-studio-code"
     ];
 
     masApps = {
