@@ -44,7 +44,7 @@
 
       # Nix
       deadnix
-      nixfmt
+      nixfmt-rfc-style
       statix
 
       hadolint
