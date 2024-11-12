@@ -26,7 +26,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./modules/zellij.nix
+    ./modules/atuin.nix
     ./modules/fzf.nix
     ./modules/git.nix
     ./modules/nvim.nix
@@ -34,6 +34,7 @@
     ./modules/starship.nix
     ./modules/tmux.nix
     ./modules/wezterm.nix
+    ./modules/zellij.nix
     ./modules/zoxide.nix
     ./modules/zsh.nix
   ];
