@@ -34,7 +34,6 @@
     ./modules/nvim.nix
     ./modules/ripgrep.nix
     ./modules/starship.nix
-    ./modules/tmux.nix
     ./modules/wezterm.nix
     ./modules/zellij.nix
     ./modules/zoxide.nix
