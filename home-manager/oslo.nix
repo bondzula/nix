@@ -29,6 +29,9 @@
 
   imports = [
     ./modules/atuin.nix
+    ./modules/btop.nix
+    ./modules/eza.nix
+    ./modules/fd.nix
     ./modules/fzf.nix
     ./modules/git.nix
     ./modules/nvim.nix
