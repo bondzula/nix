@@ -21,6 +21,7 @@
     # environment.
     packages = with pkgs; [
       awscli2
+      terraform
     ];
   };
 
