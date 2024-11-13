@@ -9,16 +9,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 -- Appearance
-local custom = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
-custom.background = "#000000"
-
-config.color_schemes = {
-	["OLEDppuccin"] = custom,
-}
-
-config.color_scheme = "OLEDppuccin"
-
-config.window_background_opacity = 0.7
+config.color_scheme = "Catppuccin Mocha"
 config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
