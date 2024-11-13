@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   users.users.stefan = {
@@ -11,10 +11,7 @@
       "/opt/homebrew/bin"
     ];
 
-    systemPackages = [
-      pkgs.git
-      pkgs.zellij
-    ];
+    systemPackages = [];
   };
 
   homebrew = {
@@ -109,4 +106,8 @@
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  imports = [
+    ../../modules/darwin/default.nix
+  ];
 }
