@@ -6,6 +6,6 @@
 
   # Load the dotfile
   xdg.configFile."zellij/config.kdl" = {
-    source = ../../dotfiles/zellij/config.kdl;
+    source = ../../../dotfiles/zellij/config.kdl;
   };
 }
