@@ -31,36 +31,6 @@ config.keys = {
 	{ key = "c", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "c" }) },
 	{ key = "d", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "d" }) },
 	{ key = "l", mods = "CMD", action = act.SendKey({ mods = "CTRL", key = "l" }) },
-
-	{ key = "r", mods = "CMD", action = act.SendKey({ mods = "ALT", key = "r" }) },
-	{
-		key = "t",
-		mods = "CMD",
-		action = act.Multiple({ act.SendKey({ mods = "CTRL", key = "b" }), act.SendKey({ key = "c" }) }),
-	},
-	{
-		key = "w",
-		mods = "CMD",
-		action = act.Multiple({ act.SendKey({ mods = "CTRL", key = "b" }), act.SendKey({ key = "x" }) }),
-	},
-	{
-		key = "o",
-		mods = "CMD",
-		action = act.Multiple({ act.SendKey({ mods = "CTRL", key = "b" }), act.SendKey({ key = "K" }) }),
-	},
-	{
-		key = "k",
-		mods = "CMD",
-		action = act.Multiple({ act.SendKey({ mods = "CTRL", key = "b" }), act.SendKey({ key = "K" }) }),
-	},
 }
--- I can use the tab navigator (LDR t), but I also want to quickly navigate tabs with index
-for i = 1, 9 do
-	table.insert(config.keys, {
-		key = tostring(i),
-		mods = "CMD",
-		action = act.Multiple({ act.SendKey({ mods = "CTRL", key = "b" }), act.SendKey({ key = tostring(i) }) }),
-	})
-end
 
 return config
