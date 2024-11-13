@@ -14,7 +14,7 @@
     darwinConfigurations = {
       "oslo" = nix-darwin.lib.darwinSystem {
         modules = [
-          ./darwin/oslo.nix
+          ./hosts/oslo/configuration.nix
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
@@ -32,7 +32,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.stefan = import ./home-manager/oslo.nix;
+            home-manager.users.stefan = import ./hosts/oslo/home.nix;
           }
         ];
       };
