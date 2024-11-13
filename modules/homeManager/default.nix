@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ config, lib, ... }:
 
 {
   imports = [
@@ -16,4 +16,6 @@
     ./modules/zoxide.nix
     ./modules/zsh.nix
   ];
+
+  zsh.enable = lib.mkDefault true;
 }
