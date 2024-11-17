@@ -1,21 +1,27 @@
-_:
+{ lib, config, ... }:
 
 {
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      # Disable AWS module
-      aws = { disabled = true; };
+  options = {
+    starship.enable = lib.mkEnableOption   "Enables Starship Prompot";
+  };
 
-      # Enable nix_shell
-      nix_shell = {
-        symbol = "❄️";
-        format = "via [$symbol $state](bold blue)";
+  config = lib.mkIf config.starship.enable {
+    programs.starship = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = {
+        # Disable AWS module
+        aws = { disabled = true; };
+
+        # Enable nix_shell
+        nix_shell = {
+          symbol = "❄️";
+          format = "via [$symbol $state](bold blue)";
+        };
+
+        # Disable the container indicator
+        container = { disabled = true; };
       };
-
-      # Disable the container indicator
-      container = { disabled = true; };
     };
   };
 }
