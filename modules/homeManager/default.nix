@@ -15,6 +15,7 @@
     ./modules/zellij.nix
     ./modules/zoxide.nix
     ./modules/zsh.nix
+    ./modules/nushell.nix
   ];
 
   zsh.enable = lib.mkDefault true;
