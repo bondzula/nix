@@ -5,7 +5,7 @@
     wezterm.enable = lib.mkEnableOption "Enables Wezterm Module";
   };
 
-  config = lib.mkIf config.nushell.enable {
+  config = lib.mkIf config.wezterm.enable {
     programs.wezterm = {
       enable = true;
       extraConfig = ''
@@ -27,6 +27,9 @@
         config.scrollback_lines = 5000
         config.enable_scroll_bar = false
         config.window_padding = { left = 10, right = 10, top = 5, bottom = 5 }
+
+        config.front_end = "WebGpu"
+        config.webgpu_power_preference = 'HighPerformance'
 
         -- Dim inactive panes
         config.inactive_pane_hsb = {

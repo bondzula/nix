@@ -31,4 +31,6 @@
   imports = [
     ../../modules/homeManager
   ];
+
+  wezterm.enable = true;
 }

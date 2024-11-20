@@ -19,5 +19,4 @@
   ];
 
   zsh.enable = lib.mkDefault true;
-  wezterm.enable = lib.mkDefault true;
 }

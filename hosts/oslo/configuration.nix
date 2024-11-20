@@ -34,7 +34,6 @@
       "roon"
       "skype"
       "visual-studio-code"
-      "wezterm"
       "zen-browser"
     ];
 
