@@ -58,5 +58,6 @@
     EDITOR = "${pkgs.neovim}/bin/nvim";
     VISUAL = "${pkgs.neovim}/bin/nvim";
     SUDO_EDITOR = "${pkgs.neovim}/bin/nvim";
+    MANPAGER="nvim +Man!";
   };
 }
