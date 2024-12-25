@@ -8,7 +8,9 @@
     withNodeJs = true;
     withPython3 = true;
 
+    extraLuaPackages = ps: [ ps.magick ];
     extraPackages = with pkgs; [
+      imagemagick
       fd
       ripgrep
 
@@ -28,8 +30,8 @@
       nodePackages.npm
 
       # Lua
-      lua5_4_compat
-      lua54Packages.luarocks
+      lua51Packages.lua
+      lua51Packages.luarocks
 
       # PHP
       php82
