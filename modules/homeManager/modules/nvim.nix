@@ -14,6 +14,8 @@
       fd
       ripgrep
 
+      pngpaste # Used for img-clip plugin
+
       # Build tools
       pkg-config
       gcc

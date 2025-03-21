@@ -27,6 +27,7 @@
       *.js.map
       # Compiled files
       .sass-cache/
+      .obsidian
     '';
   };
 

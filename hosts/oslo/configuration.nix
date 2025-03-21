@@ -11,31 +11,51 @@
       "/opt/homebrew/bin"
     ];
 
-    systemPackages = [];
+    systemPackages = [
+      pkgs.rsync
+      pkgs.ansible
+      pkgs.tealdeer
+      pkgs.wakeonlan
+      pkgs.wget
+      pkgs.nerd-fonts.jetbrains-mono
+      pkgs.mysql84
+      pkgs.lazygit
+      pkgs.lazydocker
+      # pkgs.zig
+      pkgs.cmake
+      pkgs.markdownlint-cli2
+      pkgs.nodePackages.prettier
+      pkgs.languagetool-rust
+      pkgs.lazygit
+      pkgs.nodejs_20
+      pkgs.pnpm
+      pkgs.go
+      pkgs.magic-wormhole
+      pkgs.bun
+      pkgs.uv
+    ];
   };
 
   homebrew = {
-    enable = true;
+    enable = false;
 
     brews = [
       "mas"
+      "exercism"
     ];
 
     casks = [
       "1password"
       "aldente"
-      "chatgpt"
       "cleanshot"
       "docker"
       "firefox"
       "monitorcontrol"
       "obsidian"
       "raycast"
-      "roon"
       "skype"
-      "visual-studio-code"
-      "wezterm"
       "zen-browser"
+      "google-chrome"
     ];
 
     masApps = {
@@ -50,10 +70,6 @@
     };
   };
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
-
   system.defaults = {
     # Dock settings
     dock = {
@@ -61,13 +77,9 @@
       show-recents = false;
       persistent-apps = [
         "/Applications/Zen Browser.app"
-        "/Applications/WezTerm.app"
+        "/Applications/Ghostty.app"
         "/Applications/Obsidian.app"
         "/Applications/TickTick.app"
-        "/Applications/ChatGPT.app"
-        "/Applications/1Password.app"
-        "/Applications/Roon.app"
-        "/Applications/Skype.app"
       ];
     };
 
@@ -87,8 +99,6 @@
     };
   };
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
   # nix.package = pkgs.nix;
 
   # Necessary for using flakes on this system.

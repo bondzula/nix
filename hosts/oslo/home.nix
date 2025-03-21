@@ -20,7 +20,9 @@
     # The home.packages option allows you to install Nix packages into your
     # environment.
     packages = with pkgs; [
+      go-blueprint
       awscli2
+      ssm-session-manager-plugin
       terraform
     ];
   };
@@ -31,6 +33,4 @@
   imports = [
     ../../modules/homeManager
   ];
-
-  wezterm.enable = true;
 }

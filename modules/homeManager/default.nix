@@ -11,12 +11,13 @@
     ./modules/nvim.nix
     ./modules/ripgrep.nix
     ./modules/starship.nix
-    ./modules/wezterm.nix
     ./modules/zellij.nix
     ./modules/zoxide.nix
     ./modules/zsh.nix
     ./modules/nushell.nix
+    ./modules/direnv.nix
   ];
 
   zsh.enable = lib.mkDefault true;
+  direnv.enable = lib.mkDefault true;
 }

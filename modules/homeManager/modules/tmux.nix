@@ -28,9 +28,6 @@ set-option -g focus-events on # TODO: learn how this works
 # TODO: find a way to toggle this?
 set-option -g display-time 3000
 
-# FIX: user action isn't recognized by Wezterm via `run-shell` 😭
-# set-hook -g client-session-changed 'run-shell -t :1 "tmux-session-changed"'
-
 # colors
 set -g default-terminal "tmux-256color"
 set -g terminal-overrides ",xterm-256color:RGB"
