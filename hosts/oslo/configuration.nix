@@ -21,7 +21,6 @@
       pkgs.mysql84
       pkgs.lazygit
       pkgs.lazydocker
-      # pkgs.zig
       pkgs.cmake
       pkgs.markdownlint-cli2
       pkgs.nodePackages.prettier
@@ -31,8 +30,8 @@
       pkgs.pnpm
       pkgs.go
       pkgs.magic-wormhole
-      pkgs.bun
       pkgs.uv
+      pkgs.caddy
     ];
   };
 
@@ -46,7 +45,6 @@
 
     casks = [
       "1password"
-      "aldente"
       "cleanshot"
       "docker"
       "firefox"
